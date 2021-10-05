@@ -3,4 +3,6 @@
     <string name="qu_sentido_es_este">¿Qué sentido es este?</string>
     <string name="enviar">Enviar</string>
     <string name="otro">Otro</string>
+    <string name="perdiste">Intenta de nuevo!</string>
+    <string name="acertado">Respuesta correcta!</string>
 </resources>
