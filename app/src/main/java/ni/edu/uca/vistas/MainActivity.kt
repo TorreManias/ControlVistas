@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         val botonOtroSentido : Button = findViewById(R.id.btnOtro)
         botonOtroSentido.setOnClickListener{
             generarNumeroAleatorio()
+            val feedback : TextView = findViewById(R.id.tvResultado)
+            feedback.setText(" ")
         }
 
         val responderBoton : Button = findViewById(R.id.btnResponder)
