@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
+import ni.edu.uca.vistas.model.NumeroAleatorio
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         val botonOtroSentido : Button = findViewById(R.id.btnOtro)
         botonOtroSentido.setOnClickListener{
+            val feedback : TextView = findViewById(R.id.tvResultado)
+            feedback.text = " "
             generarNumeroAleatorio()
         }
 
@@ -56,6 +60,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun verificarRespuesta(){
+        val respuestaUsuario : TextView = findViewById(R.id.etSentido)
+        val feedback : TextView = findViewById(R.id.tvResultado)
 
+        if(respuestaUsuario.text.toString() == SENTIDO_ACTUAL){
+            feedback.text = getString(R.string.acertado)
+        } else {
+            feedback.text = getString(R.string.perdiste)
+        }
     }
 }

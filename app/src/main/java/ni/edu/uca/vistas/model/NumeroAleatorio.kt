@@ -1,4 +1,4 @@
-package ni.edu.uca.vistas
+package ni.edu.uca.vistas.model
 
 class NumeroAleatorio(private val maxNum: Int) {
 
